@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+pandas
+nltk
+spacy
+dvc
+apache-airflow
+# For the spaCy model, you can include the direct download link:
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz#egg=en_core_web_sm
