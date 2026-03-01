@@ -11,3 +11,18 @@ stages:
     - trend_intelligence_pipeline/src/scraper.py
     outs:
     - trend_intelligence_pipeline/data/raw/products_raw_500.json
+  preprocess:
+    cmd: python trend_intelligence_pipeline/src/preprocess.py
+    deps:
+    - trend_intelligence_pipeline/data/raw/products_raw_500.json
+    - trend_intelligence_pipeline/src/preprocess.py
+    outs:
+    - trend_intelligence_pipeline/data/processed/products_clean.csv
+  featurize:
+    cmd: python trend_intelligence_pipeline/src/feature_engineering.py
+    deps:
+    - trend_intelligence_pipeline/data/processed/products_clean.csv
+    - trend_intelligence_pipeline/src/feature_engineering.py
+    outs:
+    - trend_intelligence_pipeline/data/features/bow_matrix.npy
+    - trend_intelligence_pipeline/data/features/vocab.json

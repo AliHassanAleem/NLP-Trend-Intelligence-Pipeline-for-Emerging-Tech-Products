@@ -40,3 +40,23 @@ stages:
       hash: md5
       md5: aa5e6ec24835f7fe203174e1fb03f126
       size: 98979
+  featurize:
+    cmd: python trend_intelligence_pipeline/src/feature_engineering.py
+    deps:
+    - path: trend_intelligence_pipeline/data/processed/products_clean.csv
+      hash: md5
+      md5: aa5e6ec24835f7fe203174e1fb03f126
+      size: 98979
+    - path: trend_intelligence_pipeline/src/feature_engineering.py
+      hash: md5
+      md5: f7016e41a64e5501da3bdb5e6696c9fd
+      size: 1568
+    outs:
+    - path: trend_intelligence_pipeline/data/features/bow_matrix.npy
+      hash: md5
+      md5: e3de97ba5a6968ef1398c1e98aa85364
+      size: 7708128
+    - path: trend_intelligence_pipeline/data/features/vocab.json
+      hash: md5
+      md5: 3d8c241b30ece7c70d1e2e233c33f71d
+      size: 31327
