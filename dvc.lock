@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  fetch_v1:
+    cmd: python trend_intelligence_pipeline/src/scraper.py --limit 300
+    deps:
+    - path: trend_intelligence_pipeline/src/scraper.py
+      hash: md5
+      md5: 628bde7b895b303cb8bde91f14f9973a
+      size: 4262
+    outs:
+    - path: trend_intelligence_pipeline/data/raw/products_raw_300.json
+      hash: md5
+      md5: 8c4a2a2907b7a8dd63d6c23c68bd2a36
+      size: 160812
+  fetch_v2:
+    cmd: python trend_intelligence_pipeline/src/scraper.py --limit 500
+    deps:
+    - path: trend_intelligence_pipeline/src/scraper.py
+      hash: md5
+      md5: 628bde7b895b303cb8bde91f14f9973a
+      size: 4262
+    outs:
+    - path: trend_intelligence_pipeline/data/raw/products_raw_500.json
+      hash: md5
+      md5: 7bbab506d6ad5e4dc80438d341742fe3
+      size: 269959

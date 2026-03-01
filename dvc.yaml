@@ -1,0 +1,13 @@
+stages:
+  fetch_v1:
+    cmd: python trend_intelligence_pipeline/src/scraper.py --limit 300
+    deps:
+    - trend_intelligence_pipeline/src/scraper.py
+    outs:
+    - trend_intelligence_pipeline/data/raw/products_raw_300.json
+  fetch_v2:
+    cmd: python trend_intelligence_pipeline/src/scraper.py --limit 500
+    deps:
+    - trend_intelligence_pipeline/src/scraper.py
+    outs:
+    - trend_intelligence_pipeline/data/raw/products_raw_500.json

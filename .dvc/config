@@ -1,5 +1,7 @@
 [core]
-    remote = origin
+    remote = my_local_remote
 ['remote "origin"']
     url = s3://dvc
     endpointurl = https://dagshub.com/AliHasanAleem/NLP_Trend_Analysis.s3
+['remote "my_local_remote"']
+    url = ../dvc_storage
