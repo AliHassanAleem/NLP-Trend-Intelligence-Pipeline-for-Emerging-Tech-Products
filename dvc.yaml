@@ -26,3 +26,11 @@ stages:
     outs:
     - trend_intelligence_pipeline/data/features/bow_matrix.npy
     - trend_intelligence_pipeline/data/features/vocab.json
+  report:
+    cmd: python trend_intelligence_pipeline/src/linguistic_intelligence.py
+    deps:
+    - trend_intelligence_pipeline/data/features/vocab.json
+    - trend_intelligence_pipeline/data/processed/products_clean.csv
+    - trend_intelligence_pipeline/src/linguistic_intelligence.py
+    outs:
+    - reports/trend_summary.txt

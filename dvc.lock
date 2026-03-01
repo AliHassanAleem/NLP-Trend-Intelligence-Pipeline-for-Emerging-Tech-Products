@@ -60,3 +60,23 @@ stages:
       hash: md5
       md5: 3d8c241b30ece7c70d1e2e233c33f71d
       size: 31327
+  report:
+    cmd: python trend_intelligence_pipeline/src/linguistic_intelligence.py
+    deps:
+    - path: trend_intelligence_pipeline/data/features/vocab.json
+      hash: md5
+      md5: 3d8c241b30ece7c70d1e2e233c33f71d
+      size: 31327
+    - path: trend_intelligence_pipeline/data/processed/products_clean.csv
+      hash: md5
+      md5: aa5e6ec24835f7fe203174e1fb03f126
+      size: 98979
+    - path: trend_intelligence_pipeline/src/linguistic_intelligence.py
+      hash: md5
+      md5: c245946fd1f043e2cf7541854f5c228c
+      size: 2265
+    outs:
+    - path: reports/trend_summary.txt
+      hash: md5
+      md5: c8cdd9119e4d1e1c49d788a1b0033ddd
+      size: 1158

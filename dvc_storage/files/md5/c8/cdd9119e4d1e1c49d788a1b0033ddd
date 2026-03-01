@@ -1,0 +1,10 @@
+--- TrendScope Linguistic Report ---
+Vocabulary Size: 1927
+Avg Description Length: 7.42 tokens
+
+Top 30 Unigrams: [('ai', 142), ('free', 38), ('tool', 35), ('turn', 30), ('agent', 26), ('app', 23), ('aipowered', 20), ('second', 19), ('platform', 18), ('generator', 15), ('game', 14), ('code', 14), ('one', 13), ('find', 13), ('local', 12), ('get', 12), ('photo', 12), ('daily', 11), ('image', 10), ('real', 10), ('create', 10), ('video', 10), ('smart', 10), ('management', 10), ('prompt', 10), ('simple', 9), ('tracker', 9), ('build', 9), ('crypto', 9), ('best', 9)]
+
+Top 20 Bigrams: [(('ai', 'agent'), 14), (('hat', 'old'), 6), (('old', 'daddin'), 6), (('ai', 'tool'), 5), (('ai', 'assistant'), 4), (('qr', 'code'), 4), (('dark', 'aesthetic'), 4), (('photo', 'editor'), 4), (('walk', 'unlock'), 4), (('unlock', 'phone'), 4), (('ai', 'image'), 3), (('social', 'medium'), 3), (('operating', 'system'), 3), (('management', 'software'), 3), (('one', 'place'), 3), (('agentic', 'ai'), 3), (('tv', 'remote'), 3), (('ai', 'prompt'), 3), (('prompt', 'second'), 3), (('tool', 'ai'), 3)]
+
+Potential Duplicates (Edit Distance < 3): 0
+Avg Perplexity (Held-out): 1580.61
