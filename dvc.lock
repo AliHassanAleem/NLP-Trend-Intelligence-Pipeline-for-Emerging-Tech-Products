@@ -24,3 +24,19 @@ stages:
       hash: md5
       md5: 7bbab506d6ad5e4dc80438d341742fe3
       size: 269959
+  preprocess:
+    cmd: python trend_intelligence_pipeline/src/preprocess.py
+    deps:
+    - path: trend_intelligence_pipeline/data/raw/products_raw_500.json
+      hash: md5
+      md5: 7bbab506d6ad5e4dc80438d341742fe3
+      size: 269959
+    - path: trend_intelligence_pipeline/src/preprocess.py
+      hash: md5
+      md5: a147ece36b9bd6b28b25c4ca9f2be00b
+      size: 1717
+    outs:
+    - path: trend_intelligence_pipeline/data/processed/products_clean.csv
+      hash: md5
+      md5: aa5e6ec24835f7fe203174e1fb03f126
+      size: 98979
